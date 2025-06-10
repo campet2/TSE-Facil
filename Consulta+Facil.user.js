@@ -124,7 +124,7 @@
   })
 
   waitElement(".login-form-row > form", function (formEl) {
-    formEl.setAttribute('onsubmit', 'console.log("teste")')
+    //formEl.setAttribute('onsubmit', 'console.log("teste")')
 
     waitElement("#titulo-cpf-nome", function (el) {
       el.setAttribute('placeholder', "Nome Completo")
@@ -207,7 +207,6 @@
       waitElement("input[formcontrolname='dataNascimento']", function (el) {
           el.addEventListener("input", function () {
           document.querySelector(".form-group-data-nascimento").querySelector("span.help-block").style.color = "gray"
-          console.log(document.querySelector(".form-group-data-nascimento").querySelector("span.help-block"))
         })
         el.dispatchEvent(new Event('input', { bubbles: true }))
       })
@@ -364,7 +363,7 @@
     }
 
     // Verificar a situação e definir a cor
-
+ 
 
     const permitidas = {
   "AC": [],
